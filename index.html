@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en" class="light">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tech Career Navigator | Find Your Path</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+        };
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+    <style>
+        body {
+            font-family: "Poppins", sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-gray-100 antialiased transition-colors duration-300">
+    <nav class="bg-white dark:bg-gray-800 shadow-md fixed w-full z-50 top-0 transition-colors duration-300 border-b dark:border-gray-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="text-2xl font-bold text-blue-600 dark:text-blue-400">TechNav</a
+            >
+          </div>
+
+          <div class="hidden md:flex space-x-6 items-center">
+            <a
+              href="careers.html"
+              data-i18n="nav_careers"
+              class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 font-medium transition"
+              >Career Paths</a
+            >
+
+            <button
+              class="theme-toggle flex items-center justify-center bg-gray-100 dark:bg-gray-700 px-3 py-1 rounded-full text-lg transition"
+            >
+              🌙
+            </button>
+
+            <button
+              id="langToggleBtn"
+              class="flex items-center space-x-1 bg-gray-100 dark:bg-gray-700 px-3 py-1 rounded-full text-sm font-semibold transition"
+            >
+              <span>🌐</span>
+              <span id="currentLang" class="dark:text-white">EN</span>
+            </button>
+
+            <a
+              href="quiz.html"
+              data-i18n="nav_quiz"
+              class="bg-blue-600 text-white px-5 py-2 rounded-lg font-semibold hover:bg-blue-700 transition shadow-lg"
+              >Take Quiz</a
+            >
+          </div>
+
+          <div class="md:hidden flex items-center space-x-3">
+            <button
+              class="theme-toggle flex items-center justify-center bg-gray-100 dark:bg-gray-700 px-2 py-1 rounded-full text-lg transition"
+            >
+              🌙
+            </button>
+            <button
+              id="mobileMenuBtn"
+              class="text-gray-600 dark:text-gray-300 hover:text-blue-600 focus:outline-none"
+            >
+              <svg
+                class="w-7 h-7"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16m-7 6h7"
+                ></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div
+        id="mobileMenu"
+        class="hidden md:hidden bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700 shadow-lg absolute w-full transition-colors duration-300"
+      >
+        <div class="px-4 pt-2 pb-4 space-y-1">
+          <a
+            href="careers.html"
+            data-i18n="nav_careers"
+            class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700"
+            >Career Paths</a
+          >
+
+          <div
+            class="flex justify-between items-center px-3 py-2 border-t dark:border-gray-700 mt-2"
+          >
+            <button
+              id="mobileLangToggle"
+              class="flex items-center space-x-2 text-sm font-semibold text-gray-700 dark:text-gray-300 w-full text-left"
+            >
+              <span>🌐</span>
+              <span>Switch Lang (EN / HINGLISH)</span>
+            </button>
+          </div>
+
+          <a
+            href="quiz.html"
+            data-i18n="nav_quiz_mobile"
+            class="block w-full text-center mt-4 bg-blue-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-blue-700 transition"
+            >Take Quiz Now</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <main class="mt-20 flex items-center justify-center min-h-[80vh] px-4">
+      <div class="text-center max-w-3xl">
+        <h1
+          data-i18n="hero_title"
+          class="text-4xl md:text-6xl font-extrabold tracking-tight text-gray-900 dark:text-white mb-6"
+        >
+          Confused About Your
+          <span
+            class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600"
+            >Tech Career?</span
+          >
+        </h1>
+        <p
+          data-i18n="hero_desc"
+          class="text-lg md:text-xl text-gray-600 dark:text-gray-400 mb-10 leading-relaxed"
+        >
+          Stop guessing. Take our smart assessment to discover the perfect
+          Computer Science path tailored to your skills and interests.
+        </p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+          <a
+            href="quiz.html"
+            data-i18n="btn_start_quiz"
+            class="bg-blue-600 text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-blue-700 transition shadow-xl hover:shadow-2xl transform hover:-translate-y-1"
+          >
+            Start the Career Quiz
+          </a>
+                    <a href="careers.html" data-i18n="btn_explore" class="bg-white dark:bg-gray-800 text-gray-800 dark:text-white border border-gray-300 dark:border-gray-600 px-8 py-4 rounded-xl font-bold text-lg hover:bg-gray-50 dark:hover:bg-gray-700 transition shadow-sm">
+            Explore All Paths
+          </a>
+                </div>
+            </div>
+            </main>
+            <section id="about" class="py-20 bg-white dark:bg-gray-800 transition-colors duration-300">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center max-w-3xl mx-auto mb-12">
+                        <span class="text-blue-600 dark:text-blue-400 font-bold tracking-wider uppercase text-sm">Our Mission</span
+          >
+          <h2
+            data-i18n="about_title"
+            class="text-3xl md:text-4xl font-extrabold text-gray-900 dark:text-white mt-2 mb-4"
+          >
+            Empowering the Next Generation of Tech Leaders
+          </h2>
+          <div class="w-16 h-1 bg-blue-600 rounded mx-auto"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          <div class="space-y-6">
+            <p
+              data-i18n="about_desc_1"
+              class="text-lg text-gray-600 dark:text-gray-300 leading-relaxed"
+            >
+              The tech industry is vast and rapidly evolving. For computer
+              science students, choosing the right career path can be
+              overwhelming. From Web Development to Artificial Intelligence and
+              Cybersecurity, the options are endless.
+            </p>
+            <p
+              data-i18n="about_desc_2"
+              class="text-lg text-gray-600 dark:text-gray-300 leading-relaxed"
+            >
+              TechNav was built to solve this exact problem. By combining a
+              smart psychological assessment with a comprehensive library of
+              tech careers, we help students discover the domains that perfectly
+              align with their natural skills and interests.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-2 gap-6">
+            <div
+              class="bg-gray-50 dark:bg-gray-700 p-6 rounded-2xl border border-gray-100 dark:border-gray-600 text-center shadow-sm"
+            >
+              <div class="text-4xl mb-2">🚀</div>
+              <h4 class="text-xl font-bold text-gray-900 dark:text-white mb-1">
+                40+
+              </h4>
+              <p class="text-gray-600 dark:text-gray-300 text-sm">
+                Tech Careers
+              </p>
+            </div>
+            <div
+              class="bg-gray-50 dark:bg-gray-700 p-6 rounded-2xl border border-gray-100 dark:border-gray-600 text-center shadow-sm"
+            >
+              <div class="text-4xl mb-2">🧠</div>
+              <h4 class="text-xl font-bold text-gray-900 dark:text-white mb-1">
+                Smart
+              </h4>
+              <p class="text-gray-600 dark:text-gray-300 text-sm">
+                Assessment Quiz
+              </p>
+            </div>
+            <div
+              class="bg-gray-50 dark:bg-gray-700 p-6 rounded-2xl border border-gray-100 dark:border-gray-600 text-center shadow-sm"
+            >
+              <div class="text-4xl mb-2">🌐</div>
+              <h4 class="text-xl font-bold text-gray-900 dark:text-white mb-1">
+                Bilingual
+              </h4>
+              <p class="text-gray-600 dark:text-gray-300 text-sm">
+                EN & Hinglish
+              </p>
+            </div>
+            <div
+              class="bg-gray-50 dark:bg-gray-700 p-6 rounded-2xl border border-gray-100 dark:border-gray-600 text-center shadow-sm"
+            >
+              <div class="text-4xl mb-2">🌙</div>
+              <h4 class="text-xl font-bold text-gray-900 dark:text-white mb-1">
+                Dark Mode
+              </h4>
+              <p class="text-gray-600 dark:text-gray-300 text-sm">
+                Premium UI/UX
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="js/theme.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/lang.js"></script>
+  </body>
+</html>
